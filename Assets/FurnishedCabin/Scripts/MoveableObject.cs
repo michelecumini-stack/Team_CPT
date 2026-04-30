@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class MoveableObject : MonoBehaviour 
+namespace Furnished
 {
+    public class MoveableObject : MonoBehaviour
+    {
 
-	public int objectNumber = 1;
+        public int objectNumber = 1;
+    }
 }

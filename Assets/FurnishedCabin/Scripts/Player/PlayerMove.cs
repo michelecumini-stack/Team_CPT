@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Furnished
+{
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour
 {
@@ -34,4 +36,7 @@ public class PlayerMove : MonoBehaviour
         //simple move applies delta time automatically
         charController.SimpleMove(forwardMovement + rightMovement);
     }
+}
+
+
 }
