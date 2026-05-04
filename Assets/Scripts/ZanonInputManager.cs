@@ -50,6 +50,16 @@ public class ZanonPlayerManager : MonoBehaviour
         Debug.Log("L'utente ha premuto lo schermo");
         Vector2 touchPosition = touchPositionReference.action.ReadValue<Vector2>();
         Debug.Log("In posizione: " + touchPosition);
+
+        Ray ray = Camera.main.ScreenPointToRay(touchPosition);
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            ApriPorta apriPorta = hit.collider.GetComponent<ApriPorta>();
+            if (apriPorta != null)
+            {
+                apriPorta.Interact();
+            }
+        }
     }
 
     private void OnMove(InputValue value)
