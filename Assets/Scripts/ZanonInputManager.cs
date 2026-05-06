@@ -68,4 +68,11 @@ public class ZanonPlayerManager : MonoBehaviour
         Debug.Log("Move Input: " + moveInput);
         currentMoveInput = moveInput;
     }
+
+
+    private void OnPick(InputValue value)
+    {
+        Debug.Log("PremutiPick");
+        FindAnyObjectByType<PlayerPickup>().PremutoPick();
+    }
 }
