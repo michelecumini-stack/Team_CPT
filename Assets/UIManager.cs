@@ -5,6 +5,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject MainMenuUI;
     [SerializeField] private GameObject LevelSelectionUI;
     [SerializeField] private GameObject CreditiUI;
+    [SerializeField] private GameObject GiocoUI;
+    [SerializeField] private GameObject GameOverUI;
 
     void Start()
     {
@@ -15,6 +17,8 @@ public class UIManager : MonoBehaviour
         MainMenuUI.SetActive(false);
         LevelSelectionUI.SetActive(false);
         CreditiUI.SetActive(false);
+        GiocoUI.SetActive(false);
+        GameOverUI.SetActive(false);
     }
     public void ShowMainMenuUI()
     {
@@ -30,5 +34,15 @@ public class UIManager : MonoBehaviour
     {
         HideAll();
         CreditiUI.SetActive(true);
+    }
+    public void ShowGiocoUI()
+    {
+        HideAll();
+        GiocoUI.SetActive(true);
+    }
+    public void ShowGameOverUI()
+    {
+        HideAll();
+        GameOverUI.SetActive(true);
     }
 }
